@@ -2185,7 +2185,7 @@
   }
 
   /* replaces Jellyfin logo */
-  .adminDrawerLogo img { content: url(https://github.com/StylGH/ZestyThemeStyl./blob/main/images/logo/sideralis-logo-light.png) !important; } imgLogoIcon { content: url(https://github.com/StylGH/ZestyThemeStyl./blob/main/images/logo/sideralis-logo-light.png) !important; } .pageTitleWithLogo { background-image: url(https://github.com/StylGH/ZestyThemeStyl./blob/main/images/logo/sideralis-logo-light.png) !important; } /* imgur link https://i.imgur.com/wHaGTm4.png */
+  .adminDrawerLogo img { content: url(https://raw.githubusercontent.com/StylGH/ZestyThemeStyl./refs/heads/main/images/logo/sideralis-logo-light.png) !important; } imgLogoIcon { content: url(https://raw.githubusercontent.com/StylGH/ZestyThemeStyl./refs/heads/main/images/logo/sideralis-logo-light.png) !important; } .pageTitleWithLogo { background-image: url(https://raw.githubusercontent.com/StylGH/ZestyThemeStyl./refs/heads/main/images/logo/sideralis-logo-light.png) !important; } /* imgur link https://i.imgur.com/wHaGTm4.png */
 
 
   /* Support for Jellyscrub plugin */
