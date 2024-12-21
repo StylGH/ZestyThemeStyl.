@@ -8,7 +8,7 @@
   --dark-highlight: 64, 83, 76;     /* 40534C */
   --dark-apparent: 32, 41, 37;      /* 202925 */
   
-  --stylish-login: url("https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/login-wallpapers/stylish-cyan.png");
+  --stylish-login: url("https://raw.githubusercontent.com/StylGH/ZestyThemeStyl./refs/heads/main/images/login-wallpapers/minimal-blue.png");
 }
 
 #loginPage {background: url("https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/login-wallpapers/minimal-cyan.png") !important;}
