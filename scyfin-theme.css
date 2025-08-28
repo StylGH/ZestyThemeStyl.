@@ -1,10 +1,10 @@
 /* Variables */
 :root {
-    --primary-r: 0;
-    --primary-g: 164;
-    --primary-b: 220;
+    --primary-r: 201;
+    --primary-g: 86;
+    --primary-b: 129;
     --primary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 1.0);
-    --secondary-accent-color: #00a4dc20;
+    --secondary-accent-color: #C9568120;
     --primary-background-color: #101010;
     --secondary-background-color: #181818;
     --primary-background-transparent: rgba(35,35,35,0.5);
