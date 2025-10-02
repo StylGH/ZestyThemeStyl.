@@ -1,0 +1,20 @@
+/* Estilo para la información de la calidad del vídeo */
+.detailText.detailText-ltr {
+    background-color: #4a5a6a; /* Color de fondo similar a ES-APTA */
+    color: #ffffff; /* Color del texto */
+    padding: 2px 8px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    margin-right: 8px; /* Espacio a la derecha */
+}
+
+/* Estilo para la información de la calidad del audio */
+.mediaSource .sectionTitle {
+    background-color: #4a5a6a; /* Color de fondo similar a ES-APTA */
+    color: #ffffff; /* Color del texto */
+    padding: 2px 8px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+    margin-bottom: 5px; /* Espacio inferior */
+}
