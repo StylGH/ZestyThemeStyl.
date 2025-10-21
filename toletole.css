@@ -1,33 +1,37 @@
-/* Custom modifications */
-:root {
-	/* Dynamically generated bg for login page, no longer required as of Jellyfin 10.11.0 */
-	/* --loginPageBgUrl: url("<ServerBaseUrl>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2"); */
-	/* Show 'Mark Played' and 'Add to Favourites' buttons on item-card hover */
-	--extraCardButtonsVisibility: block;
-	/* Center play button in item-card */
-	--overlayPlayButtonPosition: 50%;
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");
+
+.detailPagePrimaryContent.padded-right {
+      width: 100%!important;
 }
-/* Get home button back */
-.skinHeader-withBackground:not(.semiTransparent) .headerHomeButton { display: initial }
-/* Improve movies page */
-/* .layout-desktop .itemBackdrop { height: 100vh !important; position: fixed; top: 0; left: 0; right: 0 } */
-/* As of Jellyfin 10.11.0, backdrops are instead in: #reactRoot > .backdropContainer > .backdropImage */
-.layout-desktop .itemBackdrop { display: none !important }
-.detailLogo { transform: none !important; top: 1.5rem !important; height: 16vh; z-index: 1 }
-/* Required for Jellyfin 10.11.0, though this messes up cast name positioning in cast pages */
-.layout-desktop [dir="ltr"] .detailRibbon, .layout-tv [dir="ltr"] .detailRibbon { height: unset !important; margin-top: 20vh !important; padding-left: 0 !important }
-/* Make header buttons (slightly) stand out from light backgrounds */
-.skinHeader-withBackground.semiTransparent .headerButton { backdrop-filter: var(--blurDefault) !important }
-.detailButton:not(.btnPlay) { backdrop-filter: var(--blurDefault) }
-.infoWrapper { place-items: end }
-.mainDetailButtons { justify-content: start; flex: 1 0 0; margin: 0 0 0 1em }
-.itemMiscInfo { margin-bottom: 0 !important }
-/* Required for Jellyfin 10.11.0. Remove when ElegantFin gets updated. */
-.detailPagePrimaryContainer { text-align: unset; margin-bottom: unset }
-[dir="ltr"] .detailPagePrimaryContent { padding-left: unset }
-[dir="ltr"] .detailPagePrimaryContent.padded-right { padding-right: var(--sidePadding) !important }
-/* Improve cast page */
-#itemDetailPage .detailSection { grid-template-columns: unset }
-/* Improve shows page */
-/* Bring card image down in line with show episode title */
-.detailImageContainer .card.backdropCard { margin-bottom: -12.96em; margin-top: 17vh }
+
+.detailPagePrimaryContainer {
+    display: flex!important;
+    flex-direction: column!important;
+}
+
+.detailSection:has(> form.trackSelections.hide) {
+    display: block !important;
+}
+
+.detailRibbon {
+    flex-direction: column!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.detailPagePrimaryContainer {
+    padding-right: var(--sidePadding)!important;
+    text-align: left; /* thanks to @LeviSnoot */
+}
+
+.detailPagePrimaryContent.padded-right {
+    padding-left: 0!important;
+}
+
+.detailVerticalSection .emby-scrollbuttons {
+    padding-top: 2em!important;
+}
+
+.verticalSection.emby-scroller-container>h2.sectionTitle.sectionTitle-cards {
+    padding-top: 2em!important;
+}
