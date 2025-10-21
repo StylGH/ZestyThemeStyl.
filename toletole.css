@@ -1,21 +1,33 @@
-/* Reemplaza '.detailText' si encontraste otra clase para el vídeo */
-.detailText {
-    background-color: #4a5a6a;
-    color: white !important; /* El !important fuerza el estilo */
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin: 2px 4px 2px 0; /* Ajusta el margen */
-    display: inline-block;
+/* Custom modifications */
+:root {
+	/* Dynamically generated bg for login page, no longer required as of Jellyfin 10.11.0 */
+	/* --loginPageBgUrl: url("<ServerBaseUrl>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2"); */
+	/* Show 'Mark Played' and 'Add to Favourites' buttons on item-card hover */
+	--extraCardButtonsVisibility: block;
+	/* Center play button in item-card */
+	--overlayPlayButtonPosition: 50%;
 }
-
-/* Reemplaza '.mediaSource' si encontraste otra clase para el audio y sus detalles */
-.mediaSource {
-    background-color: #4a5a6a;
-    color: white !important;
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin: 2px 4px 2px 0;
-    display: inline-block;
-}
+/* Get home button back */
+.skinHeader-withBackground:not(.semiTransparent) .headerHomeButton { display: initial }
+/* Improve movies page */
+/* .layout-desktop .itemBackdrop { height: 100vh !important; position: fixed; top: 0; left: 0; right: 0 } */
+/* As of Jellyfin 10.11.0, backdrops are instead in: #reactRoot > .backdropContainer > .backdropImage */
+.layout-desktop .itemBackdrop { display: none !important }
+.detailLogo { transform: none !important; top: 1.5rem !important; height: 16vh; z-index: 1 }
+/* Required for Jellyfin 10.11.0, though this messes up cast name positioning in cast pages */
+.layout-desktop [dir="ltr"] .detailRibbon, .layout-tv [dir="ltr"] .detailRibbon { height: unset !important; margin-top: 20vh !important; padding-left: 0 !important }
+/* Make header buttons (slightly) stand out from light backgrounds */
+.skinHeader-withBackground.semiTransparent .headerButton { backdrop-filter: var(--blurDefault) !important }
+.detailButton:not(.btnPlay) { backdrop-filter: var(--blurDefault) }
+.infoWrapper { place-items: end }
+.mainDetailButtons { justify-content: start; flex: 1 0 0; margin: 0 0 0 1em }
+.itemMiscInfo { margin-bottom: 0 !important }
+/* Required for Jellyfin 10.11.0. Remove when ElegantFin gets updated. */
+.detailPagePrimaryContainer { text-align: unset; margin-bottom: unset }
+[dir="ltr"] .detailPagePrimaryContent { padding-left: unset }
+[dir="ltr"] .detailPagePrimaryContent.padded-right { padding-right: var(--sidePadding) !important }
+/* Improve cast page */
+#itemDetailPage .detailSection { grid-template-columns: unset }
+/* Improve shows page */
+/* Bring card image down in line with show episode title */
+.detailImageContainer .card.backdropCard { margin-bottom: -12.96em; margin-top: 17vh }
